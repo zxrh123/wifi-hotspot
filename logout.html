@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="windows-1256" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title> تم تسجيل خروجك من الكارت </title>
+	
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' /> 
+
+	<link rel="stylesheet" href="assets/css/assets.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font.css" />
+	<link rel="stylesheet" href="assets/css/fontello.css" />
+
+</head>
+
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+
+<body>
+ <video preload="metadata" poster="assets\img\bg.png" autoplay muted controls loop class="back-video" src="vv.mp4"></video>
+    <div class="box">
+        <div class="logo">
+            <img src="assets/img/arrows.svg">
+        </div>
+        <div class="success">
+            <p>تم تسجيل خروجك من البيانات السابقة</p>
+        </div>
+        <div class="log-in">
+            <p>دوس علي الزرار اللي تحت لو عايز تسجل بكارت او اشتراك تاني </p>
+        </div>
+	    <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+            <div class="submit">
+                <button type="submit">دخول<i class="icon-login"></i></button>
+            </div> 
+	    </form>
+    </div>
+	
+</body>
+
+</html> 

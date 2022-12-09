@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="windows-1256" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>تسجيل الدخول</title>
+	
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' /> 
+
+	<link rel="stylesheet" href="assets/css/assets.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/fontello.css" />
+    
+    <script type='text/javascript' language="JavaScript">
+        function rem(){
+        var uname = document.getElementById('uname').value;
+        var paswd = document.getElementById('paswd').value;
+        var rem   = document.getElementById('remember').checked;
+    
+        if(rem == true){
+        var date = new Date();
+        date.setTime(date.getTime()+(5*1000));
+        var expires = date.toGMTString();
+        date.setTime(date.getTime()+(259200*1000));
+        var expire  = date.toGMTString();
+        document.cookie = 'uname='+uname+';expires='+expire+'';
+        document.cookie = 'paswd='+paswd+';expires='+expire+'';
+        document.cookie = 'error=1;expires='+expires+'';
+        }
+        else{
+        return;
+        }
+        }
+     function getCookie(){
+    
+        var date = new Date();
+        date.setTime(date.getTime()+(5*1000));
+        var expires = date.toGMTString();
+    
+        var SP = document.cookie.split(';');
+        for (i=0; i < SP.length; i++) {
+        name_value = SP[i];
+        str = name_value.substring(0,6);
+        if(str.indexOf("uname") !== -1){
+        uname = name_value.split('=');
+        uname = uname[1];
+        }
+        if(str.indexOf("paswd") !== -1){
+        paswd = name_value.split('=');
+        paswd = paswd[1];
+        }
+    
+        if(str.indexOf("error") !== -1){
+        return;
+        
+        }
+    
+        }
+    
+        if(uname != ""){
+        document.cookie = 'error=1;expires='+expires+'';
+        window.location.href='login?username='+uname+'&password='+paswd+'';
+        }
+    
+        }
+    
+       getCookie();
+    
+    </script>
+
+</head>
+<script type="text/javascript" src="audio-player.js"></script>  
+<script type="text/javascript">  
+		AudioPlayer.setup("player.swf", {   
+		width: 350,
+		initialvolume: 70,   
+		transparentpagebg: "yes",   
+		left: "000000",   
+		lefticon: "FFFFFF"
+		});
+	</script>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	//<!--
+	     function doNormalLogin(){
+             
+             
+              document.getElementById("password_body").style.display = ""; 
+                 document.getElementById('username').placeholder='ادخل اسم المستخدم';
+              document.getElementById("cardoruser").innerHTML = "اسم المستخدم"; 
+	    }
+	
+	</script>
+$(endif)
+<body>
+   <video preload="metadata" poster="assets\img\bg.png" autoplay muted controls loop class="back-video" src="vv.mp4"></video>
+<source src="tf.mp3" type="audio/mpeg" />
+<source src="tf.ogg" type="audio/ogg" />
+</audio> 
+
+<audio autoplay="autoplay" loop hidden="hidden"> <source src="tf.mp3" type="audio/mp3" "="" /> </audio>
+
+<div class="logo-basheer"><img src="assets/img/logo.png"></div>
+    <div class="marque">
+        <marquee direction="right">
+            <span id="Bar_News"> -رجاء عدم اعادة الكارت للبائع اذا كان فيه مشكلة وارسالة علي الوتساب  تمت تغطية عدد كبير من المناطق - لو فيه مشكلة في كارتك ابعته علي الوتساب مع توضيح كود الكارت - لو بيتك مفيهوش تغطيه للشبكة اتصل وهيتم تغطية الشارع بالكامل  - الرجاء لو اشتريت كارت وفيه مشكلة  في الويفاي ابعتلي رسالة واتساب ووضحلي فيها اسم الشبكة -انتظروووو كارت الالعاب قريبا </span>
+        </marquee>
+        
+    </div>
+    
+    
+<div id="clock">Loading...</div>  <script type="text/javascript">  function refrClock()  {  var d=new Date();  var s=d.getSeconds();  var m=d.getMinutes();  var h=d.getHours();  var day=d.getDay();  var date=d.getDate();  var month=d.getMonth();  var year=d.getFullYear();  var days=new Array("الاحد","الاثنين","الثلاثاء","الاربعاء","الخميس","الجمعة","السبت");  var months=new Array("يناير","فبراير","مارس","ابريل","ماي","يونيو","يوليو","اغسطس","سبتمبر","اكتوبر","نوفمبر","ديسمبر");  var am_pm;  if (s<10) {s="0" + s}  if (m<10) {m="0" + m}  if (h>12) {h-=12;am_pm = "مساءً."}  else {am_pm="صباحاً."}  if (h<10) {h="0" + h}  document.getElementById("clock").innerHTML=days[day] + " " + date + " من " + months[month] + " " + year + "   |   الساعة الان " + h + ":" + m + ":" + s + " " + am_pm;  setTimeout("refrClock()",1000);  }  refrClock();</script>
+
+	</div>
+    
+    <div class="form">
+        <div class="banner">
+          !--  <img src="assets/img/logo.pn">
+            <span id="form_title0" > EGY NET HOTSPOT </span>
+        </div>
+        <div class="banner2">
+                <div class="floated">
+                    
+                        <a href="prices.html"><div class="social-icon dollar">
+                            <i class="icon-dollar"></i>
+                        </div></a>
+                        <div class="social-icon facebook">
+                            <i class="icon-facebook"></i>
+                        </div> 
+                        <div class="social-icon gplus" onclick="document.getElementById('alert-phone').style.display = ('block')">
+                            <i class="icon-whatsapp"></i>
+                        </div>
+                        <div class="social-icon location" onclick="document.getElementById('alert-location').style.display = ('block')">
+                            <i class="icon-location"></i>
+                        </div>
+                  <div class="">
+                <input checked id='remember' type='checkbox' name='remember' value="ON">
+                <label for="remember" style="color: #f1c40f;">حفظ بيانات الكرت</label>
+            </div>    </div>
+            
+        </div>
+		<form name="login" action="$(link-login-only)" method="post"
+		      $(if chap-id) onSubmit="return doLogin()" $(endif)>	
+		   <input type="hidden" name="dst" value="$(link-orig)" />
+		   <input type="hidden" name="popup" value="true" />	
+            <div class="input-field">
+		    	<input id='uname' onblur="this.value=removeSpaces(this.value);" type="text" placeholder=" اسم المستخدم هنا" name="username" required />
+                <div class="icon"><i class="icon-user"></i></div>
+            </div>
+            <div class="input-field">
+                <input id='paswd' onblur="this.value=removeSpaces(this.value);" type="password" placeholder=" كلمة السر هنا" name="password" />
+                <div class="icon"><i class="icon-lock"></i></div>
+            </div>
+    <div class="">
+            <div class="submit">
+                <button onclick='return rem();' type="submit">تسجيل الدخول<i class="icon-login"></i></button>
+    </div>
+
+            <div class="submit2">
+                <button onclick='return rem();' type="submit2"><p> <a href="adv.apk">دوس هنا وحمل برنامج الاستهلاك</a> </ p></i></button>
+           
+ </div>
+ </div>
+ <div id="alert-error" class="alert-back" onclick="this.style.display = ('none')">	
+    <div class="modal">
+        <div class="modal-icon error1"><i class="icon-error"></i></div>
+        <div class="title error1"> <h2>هام برجاء القراءة</h2></div>
+        <div class="modal-clear"></div>
+        <div id="line1"></div>
+        <div class="modal-body"><h3><font style="color: #26df0d;">اهلا بك تم تطوير الشبكة لتعمل بشكلا افضل وحل معظم المشاكل رجاء اذا كنت مستخدم للكروت ولديك مشكلة مع جهاز البث اتصل بنا علي رقم 01007863547 مع توضيح اسم الشبكة وشرح المشكلة بالتفصيل</font></h3> <div class="esc"> <h3 style="color:#eeff00;">اغلاق الرسالة</h3></div>
+
+        </div> </div>  </div> </div>
+    <div class="copyright">
+	    <span style="color: #48ff00;">   تم تصميم هذه الصفحة بواسطة : </span>
+	    <span id="Address" style="color: #d9ff01;"> م: مصطفي محمود </span>
+	</div>
+    
+<!-- Modal -->
+$(if error)
+
+ <div id="alert-error" class="alert-back1" onclick="this.style.display = ('none')">	
+        <div class="modal1">
+            <div class="modal-icon error1"><i class="icon-error1"></i></div>
+            <div class="title error1">رسالة مهمة:</div>
+            <div class="modal-clear1"></div>
+            <div id="line1"></div>
+            <div class="modal-body1">
+                <p><script type="text/javascript">
+var error = "$(error)";
+if (error == "simultaneous session limit reached") {
+document.write("هذا الحساب مفتوح علي جهاز اخر يرجي تسجيل الخروج من الهاتف الاخر واعادة المحاولة مجددا ");
+}
+else if (error == "invalid username or password") {
+document.write("يوجد تحديث طارئ للنظام لأستخدام الشبكة حاليا برجاء كتابة 123 في خانة اسم المستخدم فقط بدون كتابة اي شئ في خانة الرقم السري");
+}
+else if (error == "access denied at this time") {
+document.write("اشتراك لا يمكن استخدامه في هذا الوقت");
+}
+else if (error == "uptime limit reached") {
+document.write("عذرا لقد انتهى الوقت المتاح لك..");
+}
+else if (error == "invalid password") {
+document.write("تأكد من كتابة كلمة المرور بشكل صحيح");
+}
+else if (error == "no more sessions are allowed for user $(username)") {
+document.write("لا يمكن تسجيل الدخول اكثر من مرة");
+}
+else if (error == "no valid profile found") {
+document.write("لقد انتهت صلاحية هذه البطاقة");
+}
+else if (error == "transfer limit reached") {
+document.write("لا يمكنك تسجيل الدخول , انتهى رصيد هذا الكارت");
+}
+else if (error == "user $(username) has reached traffic limit") {
+document.write("لا يمكنك تسجيل الدخول , انتهى رصيد هذه البطاقة");
+}
+else if (error == "invalid Calling-Station-Id") {
+document.write("هذا الحساب مقترن بجهاز آخر ");
+}
+else if (error == "user $(username) is not allowed to log in from this MAC address") {
+document.write("هذا الحساب مقترن بجهاز آخر");
+}
+else if(error.search("not found") != -1) {
+document.write("اسم المستخدم غير موجود تأكد من كتابته بشكل صحيح");
+}
+else if (error == "radius timeout") {
+document.write("عزيزي المشترك نعتذر عن انقطاع الخدمة بسبب الصيانة");
+}
+else document.write("$(error)")
+                </script></p>
+            </div>
+        </div>
+    </div>
+$(endif)
+<!-- End Modal -->
+
+<!-- Modal -->
+    <div id="alert-phone" class="alert-back" onclick="this.style.display = ('none')">	
+        <div class="modal">
+            <div class="modal-icon phone"><i class="icon-phone"></i></div>
+            <div class="title phone">أتصل بنا:</div>
+            <div class="modal-clear"></div>
+            <div id="line"></div>
+            <div class="modal-body">
+                <div >ادارة  : <p  id="Phone_Admin" > 01007863547</p></div>
+                <div >صيانة  : <p  id="Phone_Repair" > 01016423885 </p></div>
+            </div>
+        </div>
+    </div>
+<!-- End Modal -->
+
+<!-- Modal -->
+    <div id="alert-location" class="alert-back" onclick="this.style.display = ('none')">	
+        <div class="modal">
+            <div class="modal-icon place"><i class="icon-location"></i></div>
+            <div class="title place">الوكلاء و الموزعين داخل المنطقة :</div>
+            <div class="modal-clear"></div>
+            <div id="line"></div>
+            <div class="modal-body">
+                <div>0 - <p id="titel"> -- مراكز توزيع كروت الاتصال والشحن وطلب الخدمات  -- </p></div>
+                <div>1 - <p id="titel0">1 مركز ابو عرب لخدمات المحمول -قرية 13/4 بجوار كبري القرية </p></div>
+                <div>2 - <p id="titel1" > مركز هاني عساف لخدمات المحول بقرية 14/4 اول القرية</p></div>
+                <div>3 - <p id="titel2" >سيبر النجم للترفيه بقرية 12/4 (ملحوظة) يوجد تغطية للشبكة داخل السايبر </p></div>
+                <div>4 - <p id="titel3" >مركت البعش (ابراهيم رفعت) قرية 12/4 بجوار المسجد الكبير </p></div>
+                <div>5 - <p id="titel4" >كافية عز (عز محمد) بقرية ابيس 4 الرائيسية بجوار الجامع الكبير و وحدة ابيس الرابعة </p></div>
+                <div>6 - <p id="titel5" >كافيه cr7 (وجدي) بقرية 11/4 بجوار المعهد الديني بعرابي </p></div>
+                <div>7 - <p id="titel6" > </p>انتظرو قريبا</div>
+            </div>
+        </div>
+    </div>
+<!-- End Modal -->
+
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js" ></script>
+<script type="text/javascript" src="assets/js/castom.js" ></script> **
+
+<script type="text/javascript" >
+// function remove Spaces in Input
+function removeSpaces(string) {
+ return string.split(' ').join('');
+}
+// Hide Placeholder on Form Focaus
+    $('[placeholder]').focus(function(){
+        $(this).attr('data-text', $(this).attr('placeholder'));
+        $(this).attr('placeholder', '');
+
+      }).blur(function(){
+          $(this).attr('placeholder', $(this).attr('data-text'));
+    });
+</body>
+</html>
+s

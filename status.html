@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="windows-1256" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	
+    $(if refresh-timeout)
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    $(endif)
+    <meta http-equiv="refresh" content="300">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>معلومات الإشتراك</title>
+	
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' /> 
+
+	<link rel="stylesheet" href="assets/css/assets.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font.css" />
+	<link rel="stylesheet" href="assets/css/fontello.css" />
+
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+<script language="JavaScript">
+
+function readablizeBytes(bytes) {
+var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
+var e = Math.floor(Math.log(bytes)/Math.log(1024));
+return (bytes/Math.pow(1024, Math.floor(e))).toFixed(2)+" "+s[e];
+}
+
+</script>
+<script language="JavaScript">
+
+function readablizeBytes(bytes) {
+var s = ['&#1576;&#1575;&#1610;&#1578;', '&#1603;&#1610;&#1604;&#1608;&#1576;&#1575;&#1610;&#1578;', '&#1605;&#1610;&#1580;&#1575;&#1576;&#1575;&#1610;&#1578;', '&#1580;&#1610;&#1580;&#1575;&#1576;&#1575;&#1610;&#1578;', '&#1578;&#1610;&#1585;&#1575;&#1576;&#1575;&#1610;&#1578;', 'PB'];
+var e = Math.floor(Math.log(bytes)/Math.log(1024));
+return (bytes/Math.pow(1024, Math.floor(e))).toFixed(2)+" "+s[e];
+}
+
+</script>
+<!-- Start Cookies-->
+<script type=text/javascript>
+    function delrem(){
+     document.cookie = "uname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+   
+       }
+   </script>
+<!-- End Cookies-->
+</head>
+<!--<div class="logo-basheer"><img src="assets/img/logo.png"></div>-->
+    <div class="marque">
+        <marquee direction="right">
+            <span id="Bar_News"> -رجاء عدم اعادة الكارت للبائع اذا كان فيه مشكلة وارسالة علي الوتساب  تمت تغطية عدد كبير من المناطق - لو فيه مشكلة في كارتك ابعته علي الوتساب مع توضيح كود الكارت - لو بيتك مفيهوش تغطيه للشبكة اتصل وهيتم تغطية الشارع بالكامل  - الرجاء لو اشتريت كارت وفيه مشكلة  في الويفاي ابعتلي رسالة واتساب ووضحلي فيها اسم الشبكة -انتظروووو كارت الالعاب قريبا </span>
+        </marquee>
+    </div>
+<body advert-pending == 'yes' onLoad="openAdvert()">
+    <!--<div class="logo-basheer">
+        <img src="assets/img/logo.png" />
+    </div>-->
+    <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+ $(if login-by == 'trial')
+ $(elif login-by != 'mac')
+ $(endif)
+ $(if session-time-left)
+ $(else)
+ $(endif)
+ $(if blocked == 'yes')
+ $(elif refresh-timeout)
+ $(endif)
+ $(if login-by-mac != 'yes')
+    <div class="box">
+        <p class="details"> <div class="submit2">
+                <button onclick='return rem();' type="submit2"><p> <a href="adv.apk">دوس هنا وحمل برنامج الاستهلاك</a> </ p></i></button>
+           
+</p>
+        <div class="info blue">
+            <div class="floateed">
+                <i class="icon-user"></i>
+                <p class="header">رقم الدخول</p>
+                <div class="clear"></div>
+            </div>
+            <p class="valuee">$(username)</p>
+        </div>
+        <div class="info red">
+            <div class="floateed">
+                <i class="icon-download"></i>
+                <p class="header"><</p>
+                <div class="clear"></div>
+            </div>
+            <p class="valuee"><script language="JavaScript">document.write(readablizeBytes($(remain-bytes-total)));</script></p>
+        </div>
+        <div class="info green"> <div class="submit2">
+                <button onclick='return rem();' type="submit2"><p> <a href="adv.apk">دوس هنا وحمل برنامج الاستهلاك</a> </ p></i></button>
+           
+
+            <div class="floateed">
+                <i class="icon-clock"></i>
+                <p class="header">لو كارتك فيه مشكلة ابعتهولنا واتس</p>
+                <div class="clear"></div>
+            </div>
+            <p id="timeLeft" class="valuee">$(session-time-left)</p>
+        </div>
+        <div class="info purple">
+            <div class="floateed">
+                <i class="icon-attach"></i>
+                <p class="header">عنوان الايبي</p>
+                <div class="clear"></div>
+            </div>
+            <p class="valuee">$(ip)</p>
+        </div>
+        <div class="clear"></div>
+        <div class="submit">
+            <input type="hidden" name="erase-cookie" value="on">
+            <button type="submit">دوس هنا لو عايز تخرج من الكارت<i class="icon-login"></i></button>
+        </div>
+        <div class="ether_cart">
+            <input onclick='return delrem();' type='submit' value="دوس هنا لوعايز تسجل بكارت تاني">
+        </div>
+        
+    </div>
+ $(endif)
+    </form>
+<script type="text/javascript">
+document.getElementById("timeLeft").innerHTML = "$(session-time-left)".replace("w", " أسبوع , ").replace("d", " يوم , ").replace("h", " ساعة , ").replace("m", " دقيقة , ").replace("s", "");
+</script>
+ </body>
+
+</html> 
